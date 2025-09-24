@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hidaya Travel - Invocations MARDI</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f5f9f7; color: #222; padding: 20px; }
+  h1 { color: #2e7d32; }
+  .invocation { background: #e0f2f1; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+  .arabic { font-size: 1.5em; color: #00695c; direction: rtl; text-align: right; }
+  .translit { font-style: italic; color: #00796b; }
+  .translation { margin-top: 5px; }
+  button { background-color: #2e7d32; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+  button:hover { background-color: #1b5e20; }
+</style>
+</head>
+<body>
+  <h1>Hidaya Travel - Invocations du MARDI</h1>
+
+  <div class="invocation">
+    <p class="arabic">اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ</p>
+    <p class="translit">Allâhoumma ajirnî mina-n-nār</p>
+    <p class="translation">Ô Allah, protège-moi du feu (de l’Enfer).</p>
+    <audio id="audio1" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio><br />
+    <button onclick="playAudio('audio1')">Écouter</button>
+    <button onclick="repeatAudio('audio1')">Répète</button>
+  </div>
+
+  <div class="invocation">
+    <p class="arabic">رَضِيتُ بِاللَّهِ رَبًّا وَبِالإِسْلَامِ دِينًا وَبِمُحَمَّدٍ نَبِيًّا</p>
+    <p class="translit">Raḍītu biLlāhi rabban wa bi-l-islāmi dīnan wa bi-Muḥammadin nabiyyā</p>
+    <p class="translation">Je suis satisfait d’Allah comme Seigneur, de l’Islam comme religion, et de Muhammad comme Prophète.</p>
+    <audio id="audio2" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio><br />
+    <button onclick="playAudio('audio2')">Écouter</button>
+    <button onclick="repeatAudio('audio2')">Répète</button>
+  </div>
+
+<script>
+  function playAudio(id) {
+    const audio = document.getElementById(id);
+    audio.loop = false;
+    audio.play();
+  }
+  function repeatAudio(id) {
+    const audio = document.getElementById(id);
+    audio.loop = true;
+    audio.play();
+  }
+</script>
+
+</body>
+</html>
